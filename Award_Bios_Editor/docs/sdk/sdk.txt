@@ -1,0 +1,330 @@
+Award BIOS Editor 1.0 Plug-in SDK
+=================================
+
+This is the documentation outlining the SDK to create your own plug-ins for the
+Award BIOS Editor.  The source code for the Wavedit plug-in is a good place to use
+as a starting template, as the SDK documentation is pretty sparse right now.  :)
+
+Note that this is the original 1.0 SDK API.  The next release of the Award BIOS
+Editor will not use the _exact_ same API -- but it should be fairly similar.
+Plug-ins which use the old API will need to be ported to the new API, and I will
+try to make the transition easy.
+
+You will need the following three files to build your plug-in:
+
+	- awdbe_wavedit\types.h		Some basic typedefs used by the plug-in system
+	- awdbedit\awdbe_exports.h	The main include necessary to access the API
+	- awdbedit.lib			The library needed to link against to access the API
+
+The awdbedit.lib library is automatically built along with the EXE when you compile the 
+Award BIOS Editor sources.
+
+
+The Award BIOS Editor API
+-------------------------
+
+The Award BIOS Editor is built around detection of component IDs within the BIOS image.
+Each component is LZH compressed, and each component has a 16-bit ID.  Your plug-in can
+either be designed to work on any ID (or a subset of IDs) whose data is recognizable,
+or work directly on an ID (as its format is already pre-determined).  In cases where
+the ID is unknown, your plug-in can register its type in the OnLoad() function by
+iterating through the list of components and checking to see if any component's data
+is recognized.
+
+You will need to build an item list structure which tells the Editor what IDs your plug-in
+supports.  Using the wavedit plug-in as an example:
+
+awdbeItem waveditItemList[] = {
+	{ 0, AWDBE_ITEM,	0x4012, "Startup WAVE sound[0]",	0 },
+	{ 0, AWDBE_ITEM,	0x4013, "Startup WAVE sound[1]",	0 },
+	{ 0, AWDBE_ITEM,	0x4014, "Startup WAVE sound[2]",	0 },
+	{ 0, AWDBE_ITEM,	0x4015, "Startup WAVE sound[3]",	0 },
+	{ 0, AWDBE_ITEM,	0x4016, "Startup WAVE sound[4]",	0 },
+	{ 0, AWDBE_ITEM,	0x4017, "Startup WAVE sound[5]",	0 },
+	{ 0, AWDBE_ITEM,	0x4018, "Startup WAVE sound[6]",	0 },
+	{ 0, AWDBE_ITEM,	0x4019, "Startup WAVE sound[7]",	0 }
+};
+
+This item list structure is defined as such:
+
+typedef struct
+{
+	ulong		 hash;		// the unique 32-bit hash value of this item
+
+	ulong		 flags;		// any of the AWDBE_* flags below
+	ushort		 biosTypeID;	// the 16-bit type ID of the component to be recognized
+	char		*itemName;	// a descriptive name of this item
+	ulong		 userData;	// any 32-bit user storable data
+} awdbeItem;
+
+The item list's "hash" value is used internally by the Editor.  Initialize it to 0.
+
+The "flags" value allows a combination of values in order to determine how the "itemName"
+description is shown in the tree view.  If the value is simply AWDBE_ITEM, the description
+is shown in the root of the tree.  If you wish to create a subfolder to insert items, create
+an item with a AWDBE_SUBMENU flag.  Note that the "biosTypeID" is not used in this instance.
+To insert items under the subfolder, use the AWDBE_SUBITEM flag.  If you wish to make a
+different folder, simply create another item with the AWDBE_SUBMENU flag, and subsequent
+items with the AWDBE_SUBITEM flag.
+
+If your plug-in adds support for a BIOS component ID that is includable and can be added
+to a BIOS image, OR in the AWDBE_INCLUDABLE bit.  The wavedit plug-in does not use this
+flag because it detects data in the already defined OEM ROM groups.  Including a WAVE sound
+in a BIOS image that does not support WAVE playback on BIOS startup is not exactly useful,
+hence the reason the AWDBE_INCLUDABLE bit is not used.
+
+The "biosTypeID" value is the 16-bit value used to identify which BIOS component should be
+handled by your plug-in.
+
+The "itemName" member is any description you wish to use to describe that particular item,
+and the "userData" value is any 32-bit value which you may use for your internal data.
+
+
+The API function list
+---------------------
+
+	void awdbeAddToItemList(ulong pluginID, awdbeItem *itemList, int itemCount);
+	
+This function inserts your item list into the Award BIOS Editor's internal item table.
+Pass it the plug-in ID which was given to your plug-in on initialization, as well as
+a pointer to the item list and the count of items.  This function may be called more
+than once, if you wish to register multiple sets of items -- however, items which
+have already been registered should not be added again.
+
+
+	fileEntry *awdbeSearchForID(ulong pluginID, ushort ID);
+	
+This function searches for a particular type ID inside the currently loaded BIOS.  If
+it is found, the returned fileEntry pointer points to a valid entry, otherwise it
+returns NULL.
+
+
+	void awdbeUpdateSelf(ulong pluginID);
+	
+This function tells the Editor to call your internal update function to commit changes
+to the data.  This is used in the wavedit plugin when the "Play" button is pressed,
+because the controls in the dialog may have been changed.  For example, if the sample
+rate control's data is changed from 22050 to 44100, and the "Play" button is pressed,
+this function is called to write back the modified controls data to memory, and then
+the WAVE is played.  If this function is not called, pressing the "Play" button will
+only play the sample at 22050 because the data has not been updated.
+
+	
+	void awdbeRefreshSelf(ulong pluginID);
+	
+This function tells the Editor to call your internal refresh function to update your
+controls with new data.  This function is useful when one control's data has changed
+which can affect the data of another control.
+
+
+	void awdbeGetDialogSize(ulong pluginID, SIZE *sz);
+	
+This function returns the size of your client dialog in window units.
+
+
+	void awdbeResizeDialog(ulong pluginID, SIZE sz);
+	
+This function tells the Editor to resize your dialog to the specified window units.
+The built-ins plugin uses this in the EPA and fullscreen bitmap viewer to ensure that
+the entire bitmap can be shown on screen.
+
+	
+	void awdbeSetModified(ulong pluginID);
+	
+This function sets the modified flag in the Editor, causing a '*' mark to appear next
+to the filename in the title bar.
+
+
+	int awdbeDoPopup(HINSTANCE hinst, LPSTR resid, int xp, int yp);
+	
+This function creates a popup window which follows the same design as the drop-down
+menus in the Editor.  Pass it the instance handle of your plugin, the resource ID of
+a menu resource, and the x and y offsets (within your client dialog), and the return
+value will be the item which the user has selected, or 0 if the menu was closed (ie:
+the user clicked outside the menu area).
+
+
+	awdbeBIOSVersion awdbeGetBIOSVersion(ulong pluginID);
+	
+This function returns the version of the currently loaded BIOS image.  This can be any
+of "awdbeBIOSVerUnknown" (an unknown version), "awdbeBIOSVer451PG" (v4.51PG), 
+"awdbeBIOSVer600PG" (v6.00PG), or "awdbeBIOSVer60" (Phoenix-type v6.0).
+
+
+Registering your plug-in
+------------------------
+
+Upon startup, the Award BIOS Editor scans the current and all subdirectories looking
+for any DLLs.  If a DLL is found, a pointer to the "awdbeRegisterPlugin" function is
+checked for.  If that function exists, the Editor assumes your plug-in is valid, and
+calls this function to get a list of pointers to functions which will be called by
+the Editor.  Your "awdbeRegisterPlugin" function should simply return a pointer to an
+"awdbeFuncTable" filled out with the functions used in your code.  DllMain() is not
+used by the Award BIOS Editor.
+
+
+The function table
+------------------
+
+Your plug-in must support 10 different functions which will be called by the Editor.
+Note that the functions in the function table *must* point to a valid function, even
+if your plug-in does not plan to use that particular function.  In other words, you
+cannot specify NULL for a function pointer.  Simply create a function which does
+nothing and returns immediately.
+
+A typical function table should look like the following:  (Note, I'm using the Wavedit
+plug-in as an example)
+
+awdbeFuncTable waveditTable = {
+	waveditDescription,
+	waveditAboutBox,
+
+	waveditInit,
+	waveditOnLoad,
+	waveditDetect,
+	
+	waveditCreateDialog,
+	waveditUpdateDialog,
+	waveditRefreshDialog,
+	waveditOnDestroyDialog,
+
+	waveditOnResizeDialog
+};
+
+
+The description function
+------------------------
+
+	char *waveditDescription(void);
+	
+This function should simply return a small string describing your plug-in.  This
+string is also used in the Help->About Plugins menu.
+
+
+The about box function
+----------------------
+
+	void waveditAboutBox(HWND parentWnd);
+	
+This function is called when the user wants to view your about box.  The parentWnd
+handle is a handle to a window you can use as a parent window.
+
+
+The init function
+-----------------
+
+	void waveditInit(ulong pluginID);
+	
+This function is called when your plug-in is to be initialized.  The pluginID parameter
+is a unique ID which is used to identify your plug-in.  It is also required when
+calling any of the API functions.
+
+Your init function will usually call the awdbeAddToItemList() API function.  See above
+for a description on this function.
+
+
+The onLoad function
+-------------------
+
+	void waveditOnLoad(fileEntry *fe, int count);
+
+This function is called when a BIOS image is loaded.  The fileEntry pointer is an array
+of fileEntry structures, each which represent a single component within the BIOS.
+"count" specifies the total number of components within the image.
+
+Typically you will use this function to update your item table based on any content or
+data found in a particular component.
+
+
+The detect function
+-------------------
+
+	bool waveditDetect(fileEntry *fe);
+	
+This function is called after the BIOS image is loaded.  Each component in the BIOS is
+checked through this detect function, and each plug-in is called until one returns TRUE.
+If no plug-in responds with TRUE, then the component is shown under the "Unknown Items"
+group in the tree view.
+
+If your plug-in understands the data or format type of this particular component, then
+return TRUE.  Otherwise, return FALSE.
+
+
+The create dialog function
+--------------------------
+
+	HWND waveditCreateDialog(awdbeItem *item, fileEntry *fe, HWND parentWnd, RECT *rc);
+	
+This function is called when the user has clicked on an item in the tree that your plug-in
+has responded TRUE to in the detection phase.  When this function is called, your plug-in
+needs to create a dialog that will be shown in the right pane, and return a handle to it.
+
+For reference purposes, the "item" parameter is a pointer to the item clicked on in the tree,
+"fe" is a pointer to the fileEntry component, "parentWnd" is a handle to a valid parent
+window, and "rc" is the rectangle (in screen coordinates) at which your dialog will be
+created.
+
+
+The update dialog function
+--------------------------
+
+	bool waveditUpdateDialog(awdbeItem *item, fileEntry *fe, HWND dialogWnd);
+	
+The update dialog function is called when the Award BIOS Editor is requesting your plug-in
+to modify the current components' data with any controls that may have changed in your
+dialog.
+
+When this function is called, you will need to make any changes to the data pointer passed
+through the "fe" structure.  If any data has been changed, return TRUE so that the Award
+BIOS Editor knows that data has been changed (a '*' mark will appear next to the filename
+in the title bar to indicate this).  If no data has changed, return FALSE.
+
+
+The refresh dialog function
+---------------------------
+
+	void waveditRefreshDialog(awdbeItem *item, fileEntry *fe, HWND dialogWnd);
+	
+The refresh dialog function is called when the Award BIOS Editor is requesting your plug-in
+to refresh the current dialogs' data with the data stored in the component.  This function
+is typically only called when the user "swaps out" component data with a new file.
+
+If any changes have been made to your controls' data, discard it and refresh the data in
+the controls with the new data.
+
+
+The onDestroy dialog function
+-----------------------------
+
+	void waveditOnDestroyDialog(awdbeItem *item, HWND dialogWnd);
+
+This function is called when your dialog is to be destroyed.  It is your plug-in's job to
+call DeleteWindow() on the main dialog, and cleanup any child windows that may have been
+created.
+
+
+The onResize dialog function
+----------------------------
+
+	void waveditOnResizeDialog(awdbeItem *item, HWND dialogWnd, RECT *rc);
+
+This function is called when the main application is being resized, or the splitter bar
+is being moved.  The rectangle "rc" is given as a size, such that the left and top
+components are 0 and the right and bottom components represent the new size of the dialog.
+
+
+For more help
+-------------
+
+I understand this documentation is a bit lacking, but hopefully I've covered the main points
+enough to get you started.  Using this along with the sample wavedit source, you should be
+able to build a plug-in for the Award BIOS Editor.
+
+If there is something you don't understand, or need more help, please visit the Public Forums
+at http://sourceforge.net/projects/awdbedit/ and post a message in the Plugin Developer 
+Assistance forum.  I will be happy to help you out with any issues you may have.
+
+If you do end up creating a plug-in for the Award BIOS Editor, please let me know!  If it's
+useful, I can integrate it into our source tree so everyone can use it.
+
+Good luck!

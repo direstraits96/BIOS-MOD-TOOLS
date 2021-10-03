@@ -1,0 +1,55 @@
+body
+    {
+    margin-left:1em;
+    margin-right:2em;
+    }
+
+h1
+    {
+    text-align:center;
+    }
+
+p
+    {
+    text-align:justify;
+    }
+
+dt
+    {
+    margin-top:0.1ex;
+    }
+
+address
+    {
+    text-align:right;
+    }
+
+.indent
+    {
+    margin-left:3em;
+    }
+
+.m4source
+    {
+    font-size:small;
+    }
+
+.fontsf
+    {
+    font-family:sans-serif;
+    }
+
+.fontms
+    {
+    font-family:monospace;
+    }
+
+.alphaol
+    {
+    list-style-type:lower-alpha;
+    }
+
+.numericol
+    {
+    list-style-type:decimal;
+    }
