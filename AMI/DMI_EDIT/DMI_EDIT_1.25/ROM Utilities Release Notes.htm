@@ -1,0 +1,4518 @@
+<html>
+<head>
+	<title>AMIBIOS Component Release Notes</title>
+	<style type="text/css">
+		table.main {
+			font-family:Arial;
+			border:solid 4px #000;
+			background-color:#cccccc;
+			width:96%;
+			margin-left:2%;
+		}
+		table.subs {
+			font-family:Arial;
+			border:solid 3px #000;
+			width:96%;
+			margin-left:2%;
+			margin-bottom:2%;
+		}
+		table.subs:hover {
+			background-color:#ccffff;
+		}
+		caption {
+			text-align:left;
+			font-size:110%;
+		}
+		tr.md {
+			font-size:18px;
+		}
+		tr.cd {
+			font-size:14px;
+		}
+		tr.cd:hover {
+			background-color:#ffffcc;
+		}
+		tr.rh {
+			font-size:14px;
+			text-align:center;
+		}
+		tr.rh:hover {
+			background-color:#ffffcc;
+		}
+		th {
+			padding:5px;
+		}
+		th.mheader {
+			font-size:200%;
+			background-color:#a0a0a0;
+		}
+		th.sheader {
+			border:solid 1px #cccccc;
+			font-size:90%;
+			background-color:#a0a0a0;
+		}
+		td {
+			border:solid 1px #cccccc;
+			padding:3px;
+		}
+		td.main {
+			padding:3px;
+			border:none;
+		}
+		td.ud {
+			text-align:left;
+		}
+		ol {
+			padding-right:3px;
+			margin-bottom:0px;
+		}
+		ul {
+			list-style: square;
+		}
+		.TitleBox {
+			border:solid 1px #000;
+			font-family:verdana;
+			font-size:16px;
+			margin:3%;
+			width:300px;
+			padding:10px;
+			letter-spacing:3px;
+			text-align:center;
+			background-color:#aaaaaa;
+		}
+		.TextBox {
+			font-family:verdana;
+			font-size:14px;
+			margin-left:3%;
+			padding-left:10px;
+		}
+	</style>
+</head>
+<body>
+	<table class="main">
+		<tr>
+			<th colspan="3" class="mheader">AMIBIOS Component Release Notes</th>
+		</tr>
+		<tr class="md">
+			<td class="main">Component Name</td>
+			<td class="main">:</td>
+			<td class="main">AMIBIOS ROM Utilities</td>
+		</tr>
+		<tr class="md">
+			<td class="main">Component Type</td>
+			<td class="main">:</td>
+			<td class="main">eModule</td>
+		</tr>
+		<tr class="md">
+			<td class="main">Release Date</td>
+			<td class="main">:</td>
+			<td class="main">September, 2009</td>
+		</tr>
+		<tr class="md">
+			<td class="main">Source Control Label</td>
+			<td class="main">:</td>
+			<td class="main">8.00.11_ROMUTILS_14</td>
+		</tr>
+		<tr class="md">
+			<td class="main">Source Control Location</td>
+			<td class="main">:</td>
+			<td class="main">CORE8_ATL;$/BIOS/Corebin/800/ROMUtils/ROMUtils.CIF</td>
+		</tr>
+	</table>
+	<div class="TitleBox">
+		Reference Documents
+	</div>
+	<div class="TextBox">
+		All ROM Utilities user guide may be found at "AMIBIOS ROM Utilities User Guide.PDF".
+	</div>
+	<div class="TitleBox">
+		Component Description
+	</div>
+	<div class="TextBox">
+		<p>The AMIBIOS ROM Utilities eModule contains all application program to handle AMIBIOS8 binary image.</p>
+		<p>The following files are included in this release:</p>
+	</div>
+	<table class="subs" cellspacing="0">
+		<tr>
+			<th class="sheader">File Name</th>
+			<th class="sheader">User Guide Chapter</th>
+			<th class="sheader">Latest Version</th>
+			<th class="sheader">File Description</th>
+		</tr>
+		<tr class="cd">
+			<td>ROMUTILS.CIF</td>
+			<td>NONE</td>
+			<td>NONE</td>
+			<td>Component information file for the eModule.</td>
+		</tr>
+		<tr class="cd">
+			<td>ROM Utilities Release Note.HTM</td>
+			<td>NONE</td>
+			<td>NONE</td>
+			<td>This file.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIBIOS ROM Utilities User Guide.PDF</td>
+			<td>NONE</td>
+			<td>1.29</td>
+			<td>This file contains user guides for all ROM Utilities.</td>
+		</tr>
+		<tr class="cd">
+			<td>UCOREDLL.DLL</td>
+			<td>NONE</td>
+			<td>2.09.02</td>
+			<td>DLL APIs.</td>
+		</tr>
+		<tr class="cd">
+			<td>UCORESYS.SYS</td>
+			<td>NONE</td>
+			<td>1.04.01</td>
+			<td>Driver for Windows 2000/XP/PE.</td>
+		</tr>
+		<tr class="cd">
+			<td>UCOREW64.SYS</td>
+			<td>NONE</td>
+			<td>1.01.01</td>
+			<td>Driver for Windows XP64.</td>
+		</tr>
+		<tr class="cd">
+			<td>UCOREVXD.VXD</td>
+			<td>NONE</td>
+			<td>1.01.01</td>
+			<td>Driver for Windows 98/ME.</td>
+		</tr>
+		<tr class="cd">
+			<td>DMI16.EXE</td>
+			<td>NONE</td>
+			<td>1.00</td>
+			<td>16-Bits driver for invoking SMBIOS Function call. This driver is called by DMIEDIT or AMIDEWIN only.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIMMDOS.EXE</td>
+			<td>1-1</td>
+			<td>1.20</td>
+			<td>Module Manipulation utility for DOS.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIMMWIN.EXE</td>
+			<td>1-1</td>
+			<td>1.20</td>
+			<td>Module Manipulation utility for Windows command mode. It is base on AMIMMDOS.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIOLDOS.EXE</td>
+			<td>1-2</td>
+			<td>1.18</td>
+			<td>Change OEM Logo utility for DOS.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIOLWIN.EXE</td>
+			<td>1-2</td>
+			<td>1.18</td>
+			<td>Change OEM Logo utility for Windows command mode. It is base on AMIOLDOS.</td>
+		</tr>
+		<tr class="cd">
+			<td>ROMSETUP.EXE</td>
+			<td>1-3</td>
+			<td>1.03</td>
+			<td>SETUP screen capture utility.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIDEDOS.EXE</td>
+			<td>1-4</td>
+			<td>1.21</td>
+			<td>DMI Editor for DOS.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIDEWIN.EXE</td>
+			<td>1-5</td>
+			<td>1.31</td>
+			<td>DMI Editor for Windows command mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIDEWINx64.EXE</td>
+			<td>1-5</td>
+			<td>1.31</td>
+			<td>DMI Editor for Windows PE 2.0 x64bit command mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>AFUDOS.EXE</td>
+			<td>1-6</td>
+			<td>4.28</td>
+			<td>AMI Firmware Update utility for DOS.</td>
+		</tr>
+		<tr class="cd">
+			<td>AFULNX2.TGZ</td>
+			<td>1-7</td>
+			<td>4.24</td>
+			<td>AMI Firmware Update utility for Linux.</td>
+		</tr>
+		<tr class="cd">
+			<td>AFUBSD.TGZ</td>
+			<td>1-7</td>
+			<td>3.10</td>
+			<td>AMI Firmware Update utility for FreeBSD.</td>
+		</tr>
+		<tr class="cd">
+			<td>AFUWIN.EXE</td>
+			<td>1-8</td>
+			<td>4.37</td>
+			<td>AMI Firmware Update utility for Windows command mode & GUI Mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>AFUWINx64.EXE</td>
+			<td>1-8</td>
+			<td>4.36</td>
+			<td>AMI Firmware Update utility for Windows PE 2.0 x64bit command mode & GUI Mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMISCE.EXE</td>
+			<td>1-9</td>
+			<td>2.20</td>
+			<td>AMI abstract CMOS Editor for DOS.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMISCEW.EXE</td>
+			<td>1-10</td>
+			<td>2.20</td>
+			<td>AMI abstract CMOS Editor for Windows command mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMISCEWx64.EXE</td>
+			<td>1-10</td>
+			<td>2.20</td>
+			<td>AMI abstract CMOS Editor for Windows PE 2.0 x64bit command mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMICMOS.EXE</td>
+			<td>1-11</td>
+			<td>2.02</td>
+			<td>Display, save and restore CMOS RAM.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIPWD.EXE</td>
+			<td>1-12</td>
+			<td>1.03</td>
+			<td>Change ROM password utility for DOS.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIPWDW.EXE</td>
+			<td>1-13</td>
+			<td>1.03</td>
+			<td>Change ROM password utility for Windows command mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>TXTBCPD.EXE</td>
+			<td>1-14</td>
+			<td>1.10</td>
+			<td>TEXT BIOS Configuration Program for DOS.</td>
+		</tr>
+		<tr class="cd">
+			<td>TXTBCPW.EXE</td>
+			<td>1-14</td>
+			<td>1.10</td>
+			<td>TEXT BIOS Configuration Program for Windows command mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>OEMLOGO.EXE</td>
+			<td>2-1</td>
+			<td>3.19</td>
+			<td>Change OEM Logo utility for Windows GUI mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>MMTOOL.EXE</td>
+			<td>2-2</td>
+			<td>3.23</td>
+			<td>Module Manipulation utility for Windows GUI mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIBCP.EXE</td>
+			<td>2-3</td>
+			<td>3.46</td>
+			<td>AMIBIOS Configuration Program for Windows GUI mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>DMIEDIT.EXE</td>
+			<td>2-4</td>
+			<td>1.25</td>
+			<td>DMI Editor for Windows GUI mode.</td>
+		</tr>
+		<tr class="cd" style="text-decoration: line-through">
+			<td>AMIDELNX.EXE</td>
+			<td>1-15</td>
+			<td>1.19</td>
+			<td>DMI Editor for Linux command mode.</td>
+		</tr>
+		<tr class="cd">
+			<td>AMIUCP.EXE</td>
+			<td>2-5</td>
+			<td>1.04</td>
+			<td>ROM Utilities Configuration Tool for Windows GUI mode.</td>
+		</tr>
+	</table>
+	<div class="TitleBox">
+		Known Issues
+	</div>
+	<div class="TextBox">
+		<ul>
+			<li>ROMSETUP cannot work well if 8GB memory Or 4MB BIOS installed.</li>
+		</ul>
+	</div>
+	<div class="TitleBox">
+		Revision History
+	</div>
+
+	<table class="subs" cellspacing="0">
+		<caption>Latest (Next label : 8.00.11_ROMUTILS_15_RC1)</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AFUDOS</td>
+			<td>4.27</td>
+			<td class="ud">
+				<ol>
+					<li>Added the CMOS Layout check to avoid generated the CMOS error after bootblock recovery. [EIP 15681]</li>
+					<li>Fixed the check rule issue of "IFD" block, when the "IFD" block size is not equal to 64Kbyte. [EIP 15502]</li>
+					<li>Fixed the NCB update checked rule, when NCB bin file not include the header info. [EIP 16464]</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.28</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the issue of Module checksums shown up message is "bad", when has one of module is aligned module. [EIP 18256]</li>
+					<li>Fixed the GPNV offset miscalculation problem, which caused the "/R" command preserve SMBIOS data failure, when the BIOS Size is bigger and than 1MByte. [EIP 18505]</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.37</td>
+			<td class="ud">
+				<ol>
+					<li>Added the CMOS Layout check to avoid generated the CMOS error after bootblock recovery. [EIP 15681]</li>
+					<li>Fixed the check rule issue of "IFD" block, when the "IFD" block size is not equal to 64Kbyte. [EIP 15502]</li>
+					<li>Fixed the NCB update checked rule, when NCB bin file not include the header info. [EIP 16464]</li>
+					<li>Modified the AFUWIN to prevent the OS enter the shutdown/sleep mode, when end-user press the power button or setting system idle time expired.</li>
+					<li>Changed the compiler way of VC 6.0 from "Shared DLL" to "Static Library", which would be fixed the AFUWIN couldn't execute problem under the WinPE environment.</li>
+					<li>Fixed the progress bar didn't synchronize issue of AFUWIN GUI Mode, when the BIOS Size is bigger than 1MByte. [EIP 16636]</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPD</td>
+			<td>1.10</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the bug of parsing rule of SETUP database.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPW</td>
+			<td>1.10</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the bug of parsing rule of SETUP database.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDELNX</td>
+			<td>1.19</td>
+			<td class="ud">
+				<ol>
+					<li>Update the support to SMBIOS spec 2.26.</li>
+					<li>Fix the issue that amidelnx can't work properly (Segmentation faul) on RHEL-5.2-server-x86-64 after update kernel from 2.6.18-92.el5 to 2.6.18-92.1.18.el5.</li>
+					<li>Update version to 1.19.</li>
+					<li>*NOTE*. AMIDELNX will be retired from ROMUtils, no longer provided in SS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.25</td>
+			<td class="ud">
+				<ol>
+					<li>Add support to SMBIOS Spec 2.26.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.46</td>
+			<td class="ud">
+				<ol>
+					<li>The text box text when press F6, F7, F10 does not display the correct text. [EIP 16762]</li>
+					<li>AMIBCP is corrupting BIOS binaries after chnage question control status from show to hidden. [EIP 14926]</li>
+					<li>2 Issues: [EIP 16066]</li>
+					<ul>
+						<li>Too Much Questions</li>
+						<li>Seperator become selectable.</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.21</td>
+			<td class="ud">
+				<ol>
+					<li>Add support to SMBIOS Spec 2.26.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.31</td>
+			<td class="ud">
+				<ol>
+					<li>Add support to SMBIOS Spec 2.26.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWINx64</td>
+			<td>1.31</td>
+			<td class="ud">
+				<ol>
+					<li>Add support to SMBIOS Spec 2.26.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCOREDLL.DLL</td>
+			<td>2.09.02</td>
+			<td class="ud">
+				<ol>
+					<li>Add support to SMBIOS Spec 2.26.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_14</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.26</td>
+			<td class="ud">
+				<ol>
+					<li>To raise the OEM SMI's checking priority for OEM to be able to adjust ROMHole flash behavior in BIOS.</li>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.36</td>
+			<td class="ud">
+				<ol>
+					<li>To raise the OEM SMI's checking priority for OEM to be able to adjust ROMHole flash behavior in BIOS.</li>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+					<li>Fixed the AFUWIN halt issue when flashing the BIOS and the "Load CMOS Default" checkbox has been checked.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWINx64</td>
+			<td>4.36</td>
+			<td class="ud">
+				<ol>
+					<li>New AFUWIN Utility to support Windows PE 2.0 x64 version.</li>
+					<li>Version sync with AFUWIN.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.24</td>
+			<td class="ud">
+				<ol>
+					<li>To raise the OEM SMI's checking priority for OEM to be able to adjust ROMHole flash behavior in BIOS.</li>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>3.10</td>
+			<td class="ud">
+				<ol>
+					<li>To raise the OEM SMI's checking priority for OEM to be able to adjust ROMHole flash behavior in BIOS.</li>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIUCP</td>
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>UI Enhancement: To pop up a confirmation box when user tries to extract the embedded cmd/file to non-exist given path.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.04</td>
+			<td class="ud">
+				<ol>
+					<li>Bug Fix: when use AMIUCP to extract embedded section(s) and after that file will be crashed when user press the save button.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">TXTBCPD</td>
+			<td>1.08</td>
+			<td class="ud">
+				<ol>
+					<li>Bug Fix: The TXTBCP/W run "/SL" command to save as a information file, and the SL file has a shaded on SYSTEM TIME question.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.09</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">TXTBCPW</td>
+			<td>1.08</td>
+			<td class="ud">
+				<ol>
+					<li>Bug Fix: The TXTBCP/W run "/SL" command to save as a information file, and the SL file has a shaded on SYSTEM TIME question.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.09</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.20</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.20</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEWx64</td>
+			<td>2.20</td>
+			<td class="ud">
+				<ol>
+					<li>New AMISCE Utility to support Windows PE 2.0 x64 version.</li>
+					<li>Version sync with AMISCEW.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.24</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIDEDOS</td>
+			<td>1.19</td>
+			<td class="ud">
+				<ol>
+					<li>Reduce allocate physical memory size in AMIDEDOS for new SMBIOS module.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.20</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.30</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWINx64</td>
+			<td>1.30</td>
+			<td class="ud">
+				<ol>
+					<li>New AMISCE Utility to support Windows PE 2.0 x64 version.</li>
+					<li>Version sync with AMIDEWIN.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDELNX</td>
+			<td>1.18</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.19</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+					<ul>
+						<li>Solve image compress & uncompress issue.</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.18</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLWIN</td>
+			<td>1.18</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.23</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule).</li>
+					<ul>
+						<li>Solve image compress & uncompress issue.</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMDOS</td>
+			<td>1.20</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule).</li>
+					<ul>
+						<li>Solve image compress & uncompress issue.</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMWIN</td>
+			<td>1.20</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule).</li>
+					<ul>
+						<li>Solve image compress & uncompress issue.</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>ROMSETUP</td>
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated, according to UCORE v1.15.00. (Compress & Uncompress Rule)</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_14_RC3</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.25</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the RomHole issue of flashing BIOS, when the RomHole count of BIOS ROM File doesn't match the System BIOS's RomHole count.</li>
+					<li>Fixed the issue of $IIM offset wrong value, when using the RomHole count of changes to flash the BIOS, and executed the command "/p" twice.</li>
+					<li>Added to support the "/S" command to be stand along command.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.35</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the RomHole issue of flashing BIOS, when the RomHole count of BIOS ROM File doesn't match the System BIOS's RomHole count.</li>
+					<li>Fixed the issue of $IIM offset wrong value, when using the RomHole count of changes to flash the BIOS, and executed the command "/p" twice.</li>
+					<li>Added to support the "/S" command to be stand along command.</li>
+					<li>Fixed the flash issue of [NCB] doesn't work in GUI mode, when [NCB 1~8] checkbox has one been checked.</li>
+					<li>Fixed the "ROM file" issue of AFUWIN doesn't work in GUI mode, when AMIUCP inserted the ROM file into the AFUWIN inside, and without other Command String.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.23</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the RomHole issue of flashing BIOS, when the RomHole count of BIOS ROM File doesn't match the System BIOS's RomHole count.</li>
+					<li>Fixed the issue of $IIM offset wrong value, when using the RomHole count of changes to flash the BIOS, and executed the command "/p" twice.</li>
+					<li>Added to support the "/S" command to be stand along command.</li>
+					<li>Fixed the issue of "TTY" wrong status, when the "AFULNX" have an error is detected.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>3.09</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the RomHole issue of flashing BIOS, when the RomHole count of BIOS ROM File doesn't match the System BIOS's RomHole count.</li>
+					<li>Fixed the issue of $IIM offset wrong value, when using the RomHole count of changes to flash the BIOS, and executed the command "/p" twice.</li>
+					<li>Added to support the "/S" command to be stand along command.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIBCP</td>
+			<td>3.44</td>
+			<td class="ud">
+				<ol>
+					<li>Feature update: Change "Show" Column to "Display Status" column and change "yes" "no" options in list box to "Display" "Shaded" and "Hidden".</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.45</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed AMIBCP crashed when opening BIOS contains string value over 512bytes.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMISCE</td>
+			<td>2.18</td>
+			<td class="ud">
+				<ol>
+					<li>Added supporting of SETUP Question Control - Shade configuration.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>2.19</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed CMOS read, write issue when Question Control's token has value 0xFFFF.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMISCEW</td>
+			<td>2.18</td>
+			<td class="ud">
+				<ol>
+					<li>Added supporting of SETUP Question Control - Shade configuration.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>2.19</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed CMOS read, write issue when Question Control's token has value 0xFFFF.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPD</td>
+			<td>1.07</td>
+			<td class="ud">
+				<ol>
+					<li>Added "Shaded" syntax support for all Question Control except String Control.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPW</td>
+			<td>1.07</td>
+			<td class="ud">
+				<ol>
+					<li>Added "Shaded" syntax support for all Question Control except String Control.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCORESYS</td>
+			<td>1.04.01</td>
+			<td class="ud">
+				<ol>
+					<li>Added ECX register value equals to 0 before triggering SMI. For DMIEditor Tool to support Aptio BIOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCOREW64</td>
+			<td>1.01.01</td>
+			<td class="ud">
+				<ol>
+					<li>Added ECX register value equals to 0 before triggering SMI. For DMIEditor Tool to support Aptio BIOS.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_14_RC2</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.24</td>
+			<td class="ud">
+				<ol>
+					<li>Added AMIUCP, default configuration, support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.34</td>
+			<td class="ud">
+				<ol>
+					<li>Added AMIUCP, default configuration, support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.22</td>
+			<td class="ud">
+				<ol>
+					<li>Added AMIUCP, default configuration, support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>3.08</td>
+			<td class="ud">
+				<ol>
+					<li>Added AMIUCP, default configuration, support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.43</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the issue of AMIBCP hang when configuring 2MB ROM File.</li>
+					<li>Fixed the issue of displaying incorrect optimal/failsafe values after end user configured some question controls' default values.</li>
+					<li>Fixed the issue of missing question controls after user adjusted the setup layout.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.18</td>
+			<td class="ud">
+				<ol>
+					<li>Add new Processor Family of Type 4 for Griffin.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.29</td>
+			<td class="ud">
+				<ol>
+					<li>Add new Processor Family of Type 4 for Griffin.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDELNX</td>
+			<td>1.17</td>
+			<td class="ud">
+				<ol>
+					<li>Add new Processor Family of Type 4 for Griffin.</li>
+					<li>Update Type 15, Long area length as Word based instead of Byte base.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">DMIEDIT</td>
+			<td>1.22</td>
+			<td class="ud">
+				<ol>
+					<li>Show Warning message when DMI16.EXE cannot be located.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.23</td>
+			<td class="ud">
+				<ol>
+					<li>Add new Processor Family of Type 4 for Griffin.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIUCP</td>
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>ROM Utilities Configuration Tool. First version of formal release.</li>
+					<li>AMIUCP Compatible Utilities</li>
+					<ul>
+						<li>AFUDOS v4.24 or later</li>
+						<li>AFUWIN v4.34 or later</li>
+						<li>AFULNX2 v4.22 or later</li>
+						<li>AFUBSD v3.08 or later</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.17</td>
+			<td class="ud">
+				<ol>
+					<li>Changed memory allocate algorithm to accept larger Setup server data.</li>
+					<li>Fixed check Supervisor and User password error.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.17</td>
+			<td class="ud">
+				<ol>
+					<li>Changed memory allocate algorithm to accept larger Setup server data.</li>
+					<li>Fixed check Supervisor and User password error.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_14_RC1</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AFUDOS</td>
+			<td>4.22</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the issue of External BootBlock CheckSum error when EBB size doesn't match 64K.</li>
+					<li>Fixed the issue of Error occurred when ROMHOLE address set to "0".</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.23</td>
+			<td class="ud">
+				<ol>
+					<li>Change $IIM parsing rule for avoiding abnormal result when ROM File does not include the signature.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="3">AFUWIN</td>
+			<td>4.31</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the issue of External BootBlock CheckSum error when EBB size doesn't match 64K.</li>
+					<li>Fixed the issue of Error occurred when ROMHOLE address set to "0".</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.32</td>
+			<td class="ud">
+				<ol>
+					<li>Change $IIM parsing rule for avoiding abnormal result when ROM File does not include the signature.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.33</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the issue of ROMHole protect behave abnormally when the AFUWIN GUI Mode doesn't trigger the "Default Configuration" SMI signal to BIOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.21</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the issue of External BootBlock CheckSum error when EBB size doesn't match 64K.</li>
+					<li>Fixed the issue of Error occurred when ROMHOLE address set to "0".</li>
+					<li>Refine function code to support new Linux kernel.</li>
+					<li>Improvement of user friendly support over Ubuntu and Debian Linux OS.</li>
+					<li>Refine functions' code to automatically choose proper Linux kernel's function call toward different Linux Kernels.</li>
+					<li>To block "Ctrl+Atl+Del" under linux text mode.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>3.07</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the issue of External BootBlock CheckSum error when EBB size doesn't match 64K.</li>
+					<li>Fixed the issue of Error occurred when ROMHOLE address set to "0".</li>
+					<li>Change $IIM parsing rule for avoiding abnormal result when ROM File does not include the signature.</li>
+					<li>Fixed the issue of FreeBSD driver error when allocated physical memory size bigger than 128K.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIDEDOS</td>
+			<td>1.16</td>
+			<td class="ud">
+				<ol>
+					<li>Source Code refinement to support AMIDEEFI.</li>
+					<li>Update the new E7h family "AMD Phenom(TM) Triple-Core Processor Family".</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.17</td>
+			<td class="ud">
+				<ol>
+					<li>Add option /BT to update SMBIOS type2 Asset tag string.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIDEWIN</td>
+			<td>1.27</td>
+			<td class="ud">
+				<ol>
+					<li>Source Code refinement to support AMIDEEFI.</li>
+					<li>Update the new E7h family "AMD Phenom (TM) Triple-Core Processor Family".</li>
+					<li>Update allocate memory above 1M (AMIDEWIN just support SMBIOS module RC20 or later).</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.28</td>
+			<td class="ud">
+				<ol>
+					<li>Add option /BT to update SMBIOS type2 Asset tag string.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">DMIEDIT</td>
+			<td>1.20</td>
+			<td class="ud">
+				<ol>
+					<li>Source Code refinement to support AMIDEEFI.</li>
+					<li>Update the new E7h family "AMD Phenom (TM) Triple-Core Processor Family".</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.21</td>
+			<td class="ud">
+				<ol>
+					<li>Add option /BT to update SMBIOS type2 Asset tag string.</li>
+						<ul>
+							<li>BIOS needs to add SMIBIOS RC20 Module or later version to support functions properly.</li>
+						</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIDELNX</td>
+			<td>1.15</td>
+			<td class="ud">
+				<ol>
+					<li>Source Code refinement to support AMIDEEFI.</li>
+					<li>Update the new E7h family "AMD Phenom (TM) Triple-Core Processor Family".</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.16</td>
+			<td class="ud">
+				<ol>
+					<li>Add option /BT to update SMBIOS type2 Asset tag string.</li>
+						<ul>
+							<li>BIOS needs to add SMIBIOS RC20 Module or later version to support functions properly.</li>
+						</ul>
+					<li>Add AMIDELNX supports Fedora Core 8.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.22</td>
+			<td class="ud">
+				<ol>
+					<li>Support Module ID 0x10 retrieve and replacement.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">UCOREDLL.DLL</td>
+			<td>2.09.00</td>
+			<td class="ud">
+				<ol>
+					<li>Add Core8 EFI ROM File Error Checking when setting SMBIOS data.</li>
+					<li>Due to BIOS does not have the field to report its version to Utility and some OS just can't reserve below 1MB physical memory so SMBIOS DLL now will allow getting physical memory above memory 1MB.</li>
+					<li>Refine Error Checking after SMIFlash Enable.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>2.09.01</td>
+			<td class="ud">
+				<ol>
+					<li>Version Correction.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIBCP</td>
+			<td>3.41</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed AMIBCP can't run normally with Nvidia MCP55+IO55 ROM file.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.42</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed AMIBCP can't open a ROM file when ROM file is on the desktop of windows.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_13</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AFUDOS</td>
+			<td>4.20</td>
+			<td class="ud">
+				<ol>
+					<li>Changed the <b>~CMD</b> command style from <b>"~"</b> to be <b>"/-"</b> for prevented the not-compatible issue on Linux and FreeBSD.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.21</td>
+			<td class="ud">
+				<ol>
+					<li>Support reporting flash ROM Hole Command on OFBD when user is issued.</li>
+					<li>Support reporting flash NCB Command on OFBD when user is issued.</li>
+					<li>Support Cancel commands reporting on OFBD default configuration data.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="3">AFUWIN</td>
+			<td>4.28</td>
+			<td class="ud">
+				<ol>
+					<li>Changed the <b>~CMD</b> command style from <b>"~"</b> to be <b>"/-"</b> for prevented the not-compatible issue on Linux and FreeBSD.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.29</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the halted issue about that when ~CMD parsed command failed under the AFUWIN GUI mode.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.30</td>
+			<td class="ud">
+				<ol>
+					<li>Support reporting flash ROM Hole Command on OFBD when user is issued.</li>
+					<li>Support reporting flash NCB Command on OFBD when user is issued.</li>
+					<li>Support Cancel commands reporting on OFBD default configuration data.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AFULNX2</td>
+			<td>4.19</td>
+			<td class="ud">
+				<ol>
+					<li>Changed the <b>~CMD</b> command style from <b>"~"</b> to be <b>"/-"</b> for prevented the not-compatible issue on Linux and FreeBSD.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.20</td>
+			<td class="ud">
+				<ol>
+					<li>Support reporting flash ROM Hole Command on OFBD when user is issued.</li>
+					<li>Support reporting flash NCB Command on OFBD when user is issued.</li>
+					<li>Support Cancel commands reporting on OFBD default configuration data.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AFUBSD</td>
+			<td>3.05</td>
+			<td class="ud">
+				<ol>
+					<li>Changed the <b>~CMD</b> command style from <b>"~"</b> to be <b>"/-"</b> for prevented the not-compatible issue on Linux and FreeBSD.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.06</td>
+			<td class="ud">
+				<ol>
+					<li>Support reporting flash ROM Hole Command on OFBD when user is issued.</li>
+					<li>Support reporting flash NCB Command on OFBD when user is issued.</li>
+					<li>Support Cancel commands reporting on OFBD default configuration data.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_13_RC3</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.19</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the token of OFBD eModule doesn't open would cause the AFUDOS crashed by EC command.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.27</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the token of OFBD eModule doesn't open would cause the AFUDOS crashed by EC command.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.18</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the token of OFBD eModule doesn't open would cause the AFUDOS crashed by EC command.</li>
+					<li>Fixed the /DEDFTCFG command issue.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>3.04</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the token of OFBD eModule doesn't open would cause the AFUDOS crashed by EC command.</li>
+					<li>Fixed the /DEDFTCFG command issue.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_13_RC2</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIDELNX</td>
+			<td>1.14</td>
+			<td class="ud">
+				<ol>
+					<li>Add information in Processor Family field of Type 4.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.15</td>
+			<td class="ud">
+				<ol>
+					<li>Add information in Processor Family field of Type 4.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.26</td>
+			<td class="ud">
+				<ol>
+					<li>Add information in Processor Family field of Type 4.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.19</td>
+			<td class="ud">
+				<ol>
+					<li>Add information in Processor Family field of Type 4.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AFUDOS</td>
+			<td>4.17</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the RomHole updated error when uses OFBD eModule ver 1.0.</li>
+					<li>Modify EC [OEM Sub Version] message display type.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.18</td>
+			<td class="ud">
+				<ol>
+					<li>Add <font color="orange">/DEDFTCFG</font> - to cancel all default configuration setting by BIOS.</li>
+					<li>Add <font color="orange">~cmd_name</font> - to cancel default configuration setting by BIOS.</li>
+					<li>Fixed the <font color="green">SMI 20-24 balance</font> problem. (For NB project)</li>
+					<li>Modified the ROMHOLE checking rule when ROMHOLE is protect with block address & Size matches with BIOS reported flash part info then AFU will NOT erase block and re-update the flash block. Adding this to prevent important data in BIOS when accident Reset is issued by end user.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AFUWIN</td>
+			<td>4.25</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the RomHole updated error when uses OFBD eModule ver 1.0.</li>
+					<li>Modify EC [OEM Sub Version] message display type.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.26</td>
+			<td class="ud">
+				<ol>
+					<li>Add <font color="orange">/DEDFTCFG</font> - to cancel all default configuration setting by BIOS.</li>
+					<li>Add <font color="orange">~cmd_name</font> - to cancel default configuration setting by BIOS.</li>
+					<li>Fixed the <font color="green">SMI 20-24 balance</font> problem. (For NB project)</li>
+					<li>Modified the ROMHOLE checking rule when ROMHOLE is protect with block address & Size matches with BIOS reported flash part info then AFU will NOT erase block and re-update the flash block. Adding this to prevent important data in BIOS when accident Reset is issued by end user.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.17</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the RomHole updated error when uses OFBD eModule ver 1.0.</li>
+					<li>Modify EC [OEM Sub Version] message display type.</li>
+					<li>Add <font color="orange">/DEDFTCFG</font> - to cancel all default configuration setting by BIOS.</li>
+					<li>Add <font color="orange">~cmd_name</font> - to cancel default configuration setting by BIOS.</li>
+					<li>Fixed the <font color="green">SMI 20-24 balance</font> problem. (For NB project)</li>
+					<li>Modified the ROMHOLE checking rule when ROMHOLE is protect with block address & Size matches with BIOS reported flash part info then AFU will NOT erase block and re-update the flash block. Adding this to prevent important data in BIOS when accident Reset is issued by end user.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>3.03</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the RomHole updated error when uses OFBD eModule ver 1.0.</li>
+					<li>Modify EC [OEM Sub Version] message display type.</li>
+					<li>Add <font color="orange">/DEDFTCFG</font> - to cancel all default configuration setting by BIOS.</li>
+					<li>Add <font color="orange">~cmd_name</font> - to cancel default configuration setting by BIOS.</li>
+					<li>Fixed the <font color="green">SMI 20-24 balance</font> problem. (For NB project)</li>
+					<li>Modified the ROMHOLE checking rule when ROMHOLE is protect with block address & Size matches with BIOS reported flash part info then AFU will NOT erase block and re-update the flash block. Adding this to prevent important data in BIOS when accident Reset is issued by end user.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPD</td>
+			<td>1.06</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed handling the menuitem shadewhen fuction error cause showing error message.</li>
+					<li>Fixed handling the hidden group of G_ROOT error cause TXTBCPD freeze.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPW</td>
+			<td>1.06</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed handling the menuitem shadewhen fuction error cause showing error message.</li>
+					<li>Fixed handling the hidden group of G_ROOT error cause TXTBCPD freeze.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_13_RC1</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIDELNX</td>
+			<td>1.12</td>
+			<td class="ud">
+				<ol>
+					<li>Add the new command /GENDRV to generate driver source code.</li>
+					<li>Add implantation of AMIDELNX to compatible w/ Ucore-linux.</li>
+					<li>Update ReadMe.txt to indicate BIOS updates when encounter "Init. SMBIOS ERROR".</li>
+					<li>Add Module License to avoid Linux kernel dump warning message.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.13</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed Driver build error on CentOS 3.8 - Linux Kernel 2.4.28</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.16</td>
+			<td class="ud">
+				<ol>
+					<li>Add "<b>Password Checking</b>" and "<b>Default Issued Command Configuration</b>" function according to OFBD spec.</li>
+					<li>Add the new command line <font color="green">/ec</font> to support flashing standard EC BIOS.</li>
+					<li>Add the new command line <font color="green">/ncb</font> and <font color="green">/ncbout</font> for NCB flash.</li>
+					<li>Support OFBD 2.0 specification - new Data structures updated.</li>
+					<li>Add to get ROM Hole information from "F000" segment.</li>
+					<ul>
+						<li>a patch to prevent getting ROM Hole info error when customer does not want to flash                       BootBlock but main bios then the ROM Hole info address will ptr to wrong location.</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.24</td>
+			<td class="ud">
+				<ol>
+					<li>Add "<b>Password Checking</b>" and "<b>Default Issued Command Configuration</b>" function according to OFBD spec.</li>
+					<li>Add the new command line <font color="green">/ec</font> to support flashing standard EC BIOS.</li>
+					<li>Add the new command line <font color="green">/ncb</font> and <font color="green">/ncbout</font> for NCB flash.</li>
+					<li>Support OFBD 2.0 specification - new Data structures updated.</li>
+					<li>Add to get ROM Hole information from "F000" segment.</li>
+					<ul>
+						<li>a patch to prevent getting ROM Hole info error when customer does not want to flash                       BootBlock but main bios then the ROM Hole info address will ptr to wrong location.</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.16</td>
+			<td class="ud">
+				<ol>
+					<li>Add "<b>Password Checking</b>" and "<b>Default Issued Command Configuration</b>" function according to OFBD spec.</li>
+					<li>Add the new command line <font color="green">/ec</font> to support flashing standard EC BIOS.</li>
+					<li>Add the new command line <font color="green">/ncb</font> and <font color="green">/ncbout</font> for NCB flash.</li>
+					<li>Support OFBD 2.0 specification - new Data structures updated.</li>
+					<li>Add /clnevnlog for Clear Event Log.</li>
+					<li>Add to get ROM Hole information from "F000" segment.</li>
+					<ul>
+						<li>a patch to prevent getting ROM Hole info error when customer does not want to flash                       BootBlock but main bios then the ROM Hole info address will ptr to wrong location.</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>3.02</td>
+			<td class="ud">
+				<ol>
+					<li>Add "<b>Password Checking</b>" and "<b>Default Issued Command Configuration</b>" function according to OFBD spec.</li>
+					<li>Add the new command line <font color="green">/ec</font> to support flashing standard EC BIOS.</li>
+					<li>Add the new command line <font color="green">/ncb</font> and <font color="green">/ncbout</font> for NCB flash.</li>
+					<li>Support OFBD 2.0 specification - new Data structures updated.</li>
+					<li>Add /clnevnlog for Clear Event Log.</li>
+					<li>Add to get ROM Hole information from "F000" segment.</li>
+					<ul>
+						<li>a patch to prevent getting ROM Hole info error when customer does not want to flash                       BootBlock but main bios then the ROM Hole info address will ptr to wrong location.</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="3">DMIEDIT</td>
+			<td>1.16</td>
+			<td class="ud">
+				<ol>
+					<li>Fix bug Modify Type 0 display data failed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.17</td>
+			<td class="ud">
+				<ol>
+					<li>Modified updated data can't correctly write into UUID field in Type 1.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.18</td>
+			<td class="ud">
+				<ol>
+					<li>Modified the Windows will pop-up warning dialog after DMIEDIT updated data by calling pnp rule.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIBCP</td>
+			<td>3.39</td>
+			<td class="ud">
+				<ol>
+					<li>Added "Ext. Function" column that determines the Question used "External Function" or not for display.</li>
+					<li>Fix some Question data are abnormal after the user drag and drop menu items.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.40</td>
+			<td class="ud">
+				<ol>
+					<li>Modified AMIBCP can't open 915 chipset ROM File.</li>
+					<li>Modified AMIBCP can't save normally when the second string pointer of Sign On Message is null.</li>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.14</td>
+			<td class="ud">
+				<ol>
+					<li>Modify the first character of upgraded string does not allow "/" or "-".</li>
+					<li>Added support for WinPE 2.0.</li>
+					<li>Modify the incorrect installed size in Type6.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.25</td>
+			<td class="ud">
+				<ol>
+					<li>Modify the first character of upgraded string does not allow "/" or "-".</li>
+					<li>Added support for WinPE 2.0.</li>
+					<li>Added the SMBSMI Version control. That means to check signature, "SS20", in the F000:RuntimeSMIFlashData+12 for indicating the SMBIOS have the buffer above 1MB support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">UCOREDLL.DLL</td>
+			<td>2.07</td>
+			<td class="ud">
+				<ol>
+					<li>Added the SMBSMI Version control. That means to check signature, "SS20", in the F000:RuntimeSMIFlashData+12 for indicating the SMBIOS have the buffer above 1MB support. Notice that DMIEDITOR will reference this DLL.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>2.08</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.14.00. (BUILDROM)</li>
+					<li>Type 1 UUID - Type in digit to update but turns out to ASCII Code Sequence</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">TXTBCPD</td>
+			<td>1.04</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed a bug at function "/o /s" that each setup entry with the same name gets mapped to the first setup entry with that name.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.05</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed a bug of parsing rule of non-standard setup database.</li>
+					<li>Referenced UCORE Function updated according to UCORE v1.14.00. (BUILDROM)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">TXTBCPW</td>
+			<td>1.04</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed a bug at function "/o /s" that each setup entry with the same name gets mapped to the first setup entry with that name.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.05</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed a bug of parsing rule of non-standard setup database.</li>
+					<li>Referenced UCORE Function updated according to UCORE v1.14.00. (BUILDROM)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="3">AMIMMDOS</td>
+			<td>1.17</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.12.00. (128 K BootBlock Support)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.18</td>
+			<td class="ud">
+				<ol>
+					<li>/INFO command may report wrong ROM free space.</li>
+					<li>/INFO command may not output EBB and NCB modules information.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.19</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.14.00. (BUILDROM)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.21</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.14.00. (BUILDROM)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIOLDOS</td>
+			<td>1.16</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.12.00. (128 K BootBlock Support)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.17</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.14.00. (BUILDROM)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIOLWIN</td>
+			<td>1.16</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.12.00. (128 K BootBlock Support)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.17</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.14.00. (BUILDROM)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.18</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.14.00. (BUILDROM)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.16</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the bug that amisce /i function failed if there are special characters in script file.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.16</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the bug that amisce /i function failed if there are special characters in script file.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_12</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.38</td>
+			<td class="ud">
+				<ol>
+					<li>Modify undo function failed in OEM DATA.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_12_RC3</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.37</td>
+			<td class="ud">
+				<ol>
+					<li>Modify OEM Data display style (change Unicode into ANSI) in hexadecimal grid.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPD</td>
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>Watcom C compiler issue. No source code update.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCOREDLL.DLL</td>
+			<td>2.06</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.12.00. (128 K BootBlock Support)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDELNX</td>
+			<td>1.11</td>
+			<td class="ud">
+				<ol>
+					<li>First version of DMI Editor tool for Linux command mode.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_12_RC2</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.17</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.12.00. (128 K BootBlock Support)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.20</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.12.00. (128 K BootBlock Support)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPD</td>
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.12.00. (128 K BootBlock Support)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPW</td>
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.12.00. (128 K BootBlock Support)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIBCP</td>
+			<td>3.35</td>
+			<td class="ud">
+				<ol>
+					<li>Referenced UCORE Function updated according to UCORE v1.12.00. (128 K BootBlock Support)</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.36</td>
+			<td class="ud">
+				<ol>
+					<li>Add /clnevnlog for Clear Event Log.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.15</td>
+			<td class="ud">
+				<ol>
+					<li>Add /clnevnlog for Clear Event Log.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.23</td>
+			<td class="ud">
+				<ol>
+					<li>Add /clnevnlog for Clear Event Log.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_12_RC1</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.15</td>
+			<td class="ud">
+				<ol>
+					<li>Add Rom Hole Function support.</li>
+					<li>Add /D command which backward compatible to AFU 1.xx version.</li>
+					<li>Add ROM ID checking under case non-sensitive rule.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>3.01</td>
+			<td class="ud">
+				<ol>
+					<li>Add Rom Hole Function support.</li>
+					<li>Add /D command which backward compatible to AFU 1.xx version.</li>
+					<li>Add ROM ID checking under case non-sensitive rule.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIDEDOS</td>
+			<td>1.12</td>
+			<td class="ud">
+				<ol>
+					<li>Modify temporary buffer size (the buffer used to get DMI data) for backward compatible.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.13</td>
+			<td class="ud">
+				<ol>
+					<li>Modify information of Type 8.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.24</td>
+			<td class="ud">
+				<ol>
+					<li>Modify information of Type 8.</li>
+					<li>Add writing DMI data function in Aptio platform.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.34</td>
+			<td class="ud">
+				<ol>
+					<li>Add tokens in source code to support customize GUI layout.</li>
+					<li>Modify "Menu Help" and "Control Help" can't display correctly.</li>
+					<li>Added the synchronized action, when the control item has the same as HStorage field.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_11</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.14</td>
+			<td class="ud">
+				<ol>
+					<li>Add Rom Hole Function support.</li>
+					<li>Add /D command which backward compatible to AFU 1.xx version.</li>
+					<li>Add ROM ID checking under case non-sensitive rule.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.22</td>
+			<td class="ud">
+				<ol>
+					<li>Add Rom Hole Function support.</li>
+					<li>Add /D command which backward compatible to AFU 1.xx version.</li>
+					<li>Add ROM ID checking under case non-sensitive rule.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.33</td>
+			<td class="ud">
+				<ol>
+					<li>Modify the OEM Data interface.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_11_RC2</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.13</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+					<li>Add ShutDown function support.</li>
+					<li>Add Santa function support, flash BIOS without detail checking.</li>
+					<li>EC Patch: Some EC will fail when Open/Close SMI is not balanced.</li>
+					<li>Add fuma function which forces backup MA Information when flashing newer version of BIOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.21</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+					<li>Add ShutDown function support.</li>
+					<li>Add Santa function support, flash BIOS without detail checking.</li>
+					<li>EC Patch: Some EC will fail when Open/Close SMI is not balanced.</li>
+					<li>Add fuma function which forces backup MA Information when flashing newer version of BIOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.14</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+					<li>Add ShutDown function support.</li>
+					<li>Add Santa function support, flash BIOS without detail checking.</li>
+					<li>EC Patch: Some EC will fail when Open/Close SMI is not balanced.</li>
+					<li>Add fuma function which forces backup MA Information when flashing newer version of BIOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIPWDW</td>
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>To fix the bug when there is no command (argv[1]) exist.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.15</td>
+			<td class="ud">
+				<ol>
+					<li>Modify LoadDriver Code to solve load driver error on some platform.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIDEWIN</td>
+			<td>1.22</td>
+			<td class="ud">
+				<ol>
+					<li>Modify LoadDriver Code to solve load driver error on some platform.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.23</td>
+			<td class="ud">
+				<ol>
+					<li>Improvement: Source Code refinement, create shareable common functions for AMIDEWIN & AMIDEDOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIDEDOS</td>
+			<td>1.10</td>
+			<td class="ud">
+				<ol>
+					<li>Add UII Information.</li>
+					<li>Add new feature for dumping/saving whole SMBIOS data in Aptio and Core8 platform.</li>
+					<li>Add supporting for Aptio project.</li>
+					<li>Added to write/read type12.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.11</td>
+			<td class="ud">
+				<ol>
+					<li>Improvement: Source Code refinement, create shareable common functions for AMIDEWIN & AMIDEDOS.</li>
+					<li>Refine Mapping/Un-Mapping Physical Memory Allocation routine.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCOREDLL.DLL</td>
+			<td>2.05</td>
+			<td class="ud">
+				<ol>
+					<li>To accelerate the application execution speed.</li>
+					<li>Add SMBIOS.CPP, SMBIOS.HPP, R0_WIN.CPP and R0_WIN.HPP to SMBIOS ModulePart.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.15</td>
+			<td class="ud">
+				<ol>
+					<li>Improvement: AMISCE supports setting password with length more than 6 characters.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.15</td>
+			<td class="ud">
+				<ol>
+					<li>Improvement: AMISCE supports setting password with length more than 6 characters.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.32</td>
+			<td class="ud">
+				<ol>
+					<li>Modified the Sign On Message string is incorrect after saving.</li>
+					<li>Modified the OEM Data is incorrect after saving, changing OEM Data and press UNDO button.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_11_RC1</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMDOS</td>
+			<td>1.16</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMWIN</td>
+			<td>1.16</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.15</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLWIN</td>
+			<td>1.15</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.19</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.16</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIPWD</td>
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>Password length will depend on BIOS.</li>
+					<li>Change border line of help screen.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>Add Utility Identification Information(UII) structure.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIPWDW</td>
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>Password length will depend on BIOS.</li>
+					<li>Change border line of help screen.</li>
+					<li>Add Utility Identification Information(UII) structure.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.14</td>
+			<td class="ud">
+				<ol>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.14</td>
+			<td class="ud">
+				<ol>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPD</td>
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPW</td>
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some ROM Hole image may not be identified.</li>
+					<li>Add Utility Identification Information (UII) structure.</li>
+					<li>Change border line of help screen.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.31</td>
+			<td class="ud">
+				<ol>
+					<li>The hexadecimal editor in BIOS String page can only support 256 characters length string.</li>
+					<li>Added Utility Identification Information (UII) information.</li>
+					<li>PCI IRQ routing structure may be destroyed after BIOS String modified.</li>
+					<li>Added the tip box for each BIOS String.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMICMOS</td>
+			<td>2.02</td>
+			<td class="ud">
+				<ol>
+					<li>Added Utility Identification Information (UII) information.</li>
+					<li>Change border line of help screen.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.21</td>
+			<td class="ud">
+				<ol>
+					<li>Adding backward compatible command support.</li>
+					<ol>
+						<li>Add /O = /OS for Type 11</li>
+						<li>Add /SCO for Type 12</li>
+						<li>Add /U = /SU AUTO for Type 1</li>
+					</ol>
+					<li>Added Utility Identification Information (UII) information.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.14</td>
+			<td class="ud">
+				<ol>
+					<li>Added to write/read type12</li>
+					<li>Source Code Refinement.</li>
+					<li>Added Utility Identification Information (UII) information.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_10</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.12</td>
+			<td class="ud">
+				<ol>
+					<li>Show warning message when /ECUF issued but no EC BIOS detected in BIOS.</li>
+					<li>Add Intel Flash Descriptor Mode support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.20</td>
+			<td class="ud">
+				<ol>
+					<li>Show warning message when /ECUF issued but no EC BIOS detected in BIOS.</li>
+					<li>Add Intel Flash Descriptor Mode support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.13</td>
+			<td class="ud">
+				<ol>
+					<li>Show warning message when /ECUF issued but no EC BIOS detected in BIOS.</li>
+					<li>Add Intel Flash Descriptor Mode support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>2.03</td>
+			<td class="ud">
+				<ol>
+					<li>Show warning message when /ECUF issued but no EC BIOS detected in BIOS.</li>
+					<li>Add Intel Flash Descriptor Mode support.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_10_RC3</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.11</td>
+			<td class="ud">
+				<ol>
+					<li>Show warning function (/sw) will cause assertion error.</li>
+					<li>Change /E function's behavior.</li>
+					<li>Added /ECUF function to flash EC bios when newer version is detected.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.19</td>
+			<td class="ud">
+				<ol>
+					<li>Show warning function (/sw) will cause assertion error.</li>
+					<li>Change /E function's behavior.</li>
+					<li>Added /ECUF function to flash EC bios when newer version is detected.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.12</td>
+			<td class="ud">
+				<ol>
+					<li>Change /E function's behavior.</li>
+					<li>Added /ECUF function to flash EC bios when newer version is detected.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>2.02</td>
+			<td class="ud">
+				<ol>
+					<li>Change /E function's behavior.</li>
+					<li>Added /ECUF function to flash EC bios when newer version is detected.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.13</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the problem that password identification may be failed sometimes.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.13</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the problem that password identification may be failed sometimes.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_10_RC2</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMDOS</td>
+			<td>1.15</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that BIOS ROM File Size over 512K can not be checksummed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMWIN</td>
+			<td>1.15</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that BIOS ROM File Size over 512K can not be checksummed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.14</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that BIOS ROM File Size over 512K can not be checksummed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLWIN</td>
+			<td>1.14</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that BIOS ROM File Size over 512K can not be checksummed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.18</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that BIOS ROM File Size over 512K can not be checksummed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.15</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that BIOS ROM File Size over 512K can not be checksummed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPD</td>
+			<td>1.01</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that BIOS ROM File Size over 512K can not be checksummed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPW</td>
+			<td>1.01</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that BIOS ROM File Size over 512K can not be checksummed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.30</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that BIOS ROM File Size over 512K can not be checksummed.</li>
+					<li>AMIBCP may not bring to the top if it is partially covered by other APs and user clicks on a view contained within the tab control.</li>
+					<li>Unicode support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.13</td>
+			<td class="ud">
+				<ol>
+					<li>Modifiable type should be shaded if SMI interface for SMBIOS to be disabled and DMI16.EXE that PnP function call driver does not present.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.10</td>
+			<td class="ud">
+				<ol>
+					<li>Add /MAI command to display System Rom or Inserted Rom file's MA information.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.18</td>
+			<td class="ud">
+				<ol>
+					<li>Add /MAI command to display System Rom or Inserted Rom file's MA information. This feature is for command prompt only.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.11</td>
+			<td class="ud">
+				<ol>
+					<li>Add /MAI command to display System Rom or Inserted Rom file's MA information.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUBSD</td>
+			<td>2.01</td>
+			<td class="ud">
+				<ol>
+					<li>Sync. With AFULNX2.</li>
+					<li>Add /MAI command to display System Rom or Inserted Rom file's MA information.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_10_RC1</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPD</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal Release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>TXTBCPW</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal Release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.12</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the bug that AMISCE password identification fail.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.12</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the bug that AMISCEW password identification fail.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.09</td>
+			<td class="ud">
+				<ol>
+					<li>Sync with AFULNX.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AFUWIN</td>
+			<td>4.16</td>
+			<td class="ud">
+				<ol>
+					<li>AFUWIN GUI interface behave abnormally.</li>
+					<li>Fixed AFULNX compile fail because of std C++ lib don't support lowercase method.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.17</td>
+			<td class="ud">
+				<ol>
+					<li>Added CMD mode support only function. No GUI interface will pop up - shrink down exe file size.</li>
+					<li>Sync with AFULNX.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX2</td>
+			<td>4.10</td>
+			<td class="ud">
+				<ol>
+					<li>New release style.</li>
+					<li>Sync with AFUDOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.22</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that windows pop up error dialog box if SETUP option item number is too large.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_9</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>UCORESYS</td>
+			<td>1.04.00</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that physical memory mapping might be failure under XP64 when more than 4GB memory installed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCOREW64</td>
+			<td>1.01.00</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that physical memory mapping might be failure under XP64 when more than 4GB memory installed.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMI16</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal Release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.21</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that input bar of OEMData cannot work properly.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.16</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that block options cannot work properly.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_9_RC1</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIOLDOS</td>
+			<td>1.12</td>
+			<td class="ud">
+				<ol>
+					<li>Turns optimal switch off.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.13</td>
+			<td class="ud">
+				<ol>
+					<li>Add new option - /A to change Animated GIF logo.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIOLWIN</td>
+			<td>1.12</td>
+			<td class="ud">
+				<ol>
+					<li>Turns optimal switch off.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.13</td>
+			<td class="ud">
+				<ol>
+					<li>Add new option - /A to change Animated GIF logo.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.17</td>
+			<td class="ud">
+				<ol>
+					<li>Module ID should not be duplicated except 20h and 21h.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCOREDLL</td>
+			<td>2.03.00</td>
+			<td class="ud">
+				<ol>
+					<li>SMBIOS PnP Function Support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCORESYS</td>
+			<td>1.03.00</td>
+			<td class="ud">
+				<ol>
+					<li>Change algorithm to selector and callgate structure for SMBIOS PnP Function Support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIBCP</td>
+			<td>3.19</td>
+			<td class="ud">
+				<ol>
+					<li>Fix garbage code.</li>
+					<li>Adding Language Control Structure.</li>
+					<li>Modify the Register field to avoid the problem that can't save WORD and DWORD data.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.20</td>
+			<td class="ud">
+				<ol>
+					<li>AMIBCP cannot save ROM file properly if no any register table existed in BIOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.09</td>
+			<td class="ud">
+				<ol>
+					<li>Adding /IV(BIOS Version in Type0) and /ID(BIOS Release Date in Type0) parameters.</li>
+					<li>Adding PnP Function call.</li>
+					<li>Adding string type determination(VarLength or FixLength).</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.15</td>
+			<td class="ud">
+				<ol>
+					<li>Adding /IV(BIOS Version in Type0) and /ID(BIOS Release Date in Type0) parameters.</li>
+					<li>Adding PnP Function call.</li>
+					<li>Adding string type determination(VarLength or FixLength).</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.12</td>
+			<td class="ud">
+				<ol>
+					<li>Adding /IV(BIOS Version in Type0) and /ID(BIOS Release Date in Type0) parameters.</li>
+					<li>Adding PnP Function call.</li>
+					<li>Adding string type determination(VarLength or FixLength).</li>
+					<li>Fix garbage code.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIPWD</td>
+			<td>1.01</td>
+			<td class="ud">
+				<ol>
+					<li>New password cannot be updated when the supervisor password is less than 3 characters.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.14</td>
+			<td class="ud">
+				<ol>
+					<li>The replacement of Animated GIF Logo support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.08</td>
+			<td class="ud">
+				<ol>
+					<li>/M, /L0,/L1 functions become standalone function which means uses w/o inseting the rom file.</li>
+					<li>Add change version function /chgver.</li>
+					<li>Fixed Mac address reading error.</li>
+					<li>Fixed flash unknown data when /M is issued.</li>
+					<li>Added new routine for afudos be able to read default setting cmd(s) properly.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.15</td>
+			<td class="ud">
+				<ol>
+					<li>NVRAM set to 32K then afuwin GUI mode progress bar will display abnormally.</li>
+					<li>Add change afuwin function both command and GUI mode.</li>
+					<li>Add change default configure behavior function.</li>
+					<ul>
+						<li>0 - set check box and user unable to make change.</li>
+						<li>1 - set check box and user be able to make changes.</li>
+					</ul>
+					<li>Add precaution behaviors to prevent user misbehavior afuwin. warning box will pop out when abnormal status happened.</li>
+					<li>AFUWIN can now issue /l0, /l1, /M function w/o inserting the ROM file.</li>
+					<li>Fixed bug /l2, /L3 function has same behavior as L0/L1.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_8</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.08</td>
+			<td class="ud">
+				<ol>
+					<li>Display warning message for when given UUID is less than 32 characters but still finish the operation.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.14</td>
+			<td class="ud">
+				<ol>
+					<li>Display warning message for when given UUID is less than 32 characters but still finish the operation.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_8_RC4</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>UCOREDLL</td>
+			<td>2.02.04</td>
+			<td class="ud">
+				<ol>
+					<li>EBB Header Checksum is fixed to 0 for AFUEFI.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMDOS</td>
+			<td>1.14</td>
+			<td class="ud">
+				<ol>
+					<li>EBB Header Checksum is fixed to 0 for AFUEFI.</li>
+					<li>Module ID should not be duplicated except 20h and 21h.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.11</td>
+			<td class="ud">
+				<ol>
+					<li>EBB Header Checksum is fixed to 0 for AFUEFI.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMWIN</td>
+			<td>1.14</td>
+			<td class="ud">
+				<ol>
+					<li>EBB Header Checksum is fixed to 0 for AFUEFI.</li>
+					<li>Module ID should not be duplicated except 20h and 21h.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLWIN</td>
+			<td>1.11</td>
+			<td class="ud">
+				<ol>
+					<li>EBB Header Checksum is fixed to 0 for AFUEFI.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.16</td>
+			<td class="ud">
+				<ol>
+					<li>EBB Header Checksum is fixed to 0 for AFUEFI.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.13</td>
+			<td class="ud">
+				<ol>
+					<li>EBB Header Checksum is fixed to 0 for AFUEFI.</li>
+					<li>Display current BIOS's logo format.</li>
+					<li>Display warning message when replaced logo format is different from current BIOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIPWDW</td>
+			<td>1.01</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that cannot work well under Windows XP and XP64 sometimes.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.18</td>
+			<td class="ud">
+				<ol>
+					<li>EBB Header Checksum is fixed to 0 for AFUEFI.</li>
+					<li>BCP can not get string properly while failsafe or optimal string table contains null string.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.07</td>
+			<td class="ud">
+				<ol>
+					<li>AMIDEDOS may write incorrect value while the user performs several tasks at the same time.</li>
+					<li>Change program procedure to avoid update function failure.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.13</td>
+			<td class="ud">
+				<ol>
+					<li>AMIDEDOS may write incorrect value while the user performs several tasks at the same time.</li>
+					<li>Change program procedure to avoid update function failure.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.07</td>
+			<td class="ud">
+				<ol>
+					<li>Added in new cmd /X:n for ROM ID checking with user defined ID length. [funciton hidden from help]</li>
+					<li>Added in new cmd /sw for showing warning message. [funciton hidden from help]</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.14</td>
+			<td class="ud">
+				<ol>
+					<li>CMD Mode -</li>
+					<ul>
+						<li>Added in new cmd /X:n for ROM ID checking with user defined ID length. [funciton hidden from help]</li>
+						<li>Added in new cmd /sw for showing warning message. [funciton hidden from help]</li>
+						<li>Bug fixed:cmd mode with cmd /M without input string cause fail.</li>
+					</ul>
+					<li>GUI Mode -</li>
+					<ul>
+						<li>Reboot sys only BIOS flashed under proper condition.</li>
+						<li>Check/Radio Box will be checked and shaded when corresponding cmd is issued by AFUSETUP.</li>
+					</ul>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX</td>
+			<td>4.06</td>
+			<td class="ud">
+				<ol>
+					<li>Added in new cmd /X:n for ROM ID checking with user defined ID length. [funciton hidden from help]</li>
+					<li>Added in new cmd /sw for showing warning message. [funciton hidden from help]</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_8_RC3</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">UCOREDLL</td>
+			<td>2.02.02</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that non-64KB Boot Block BIOS image may not be generated.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>2.02.03</td>
+			<td class="ud">
+				<ol>
+					<li>ROM Hole size should be in 16 bytes alignment.</li>
+					<li>Fix the problem that Boot Block checksum may be bad with non-64KB Boot Block.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIBCP</td>
+			<td>3.16</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that non-64KB Boot Block BIOS image may not be generated.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.17</td>
+			<td class="ud">
+				<ol>
+					<li>ROM Hole size should be in 16 bytes alignment.</li>
+					<li>Fix the problem that Boot Block checksum may be bad with non-64KB Boot Block.</li>
+					<li>Fix the problem that modified ROM image may hang at check point D7h.</li>
+					<li>Split language module can not be recognized.</li>
+					<li>CPU MicroCode information is incorrect.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIMMDOS</td>
+			<td>1.12</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that non-64KB Boot Block BIOS image may not be generated.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.13</td>
+			<td class="ud">
+				<ol>
+					<li>ROM Hole size should be in 16 bytes alignment.</li>
+					<li>Fix the problem that Boot Block checksum may be bad with non-64KB Boot Block.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIMMWIN</td>
+			<td>1.12</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that non-64KB Boot Block BIOS image may not be generated.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.13</td>
+			<td class="ud">
+				<ol>
+					<li>ROM Hole size should be in 16 bytes alignment.</li>
+					<li>Fix the problem that Boot Block checksum may be bad with non-64KB Boot Block.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">MMTOOL</td>
+			<td>3.14</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that non-64KB Boot Block BIOS image may not be generated.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.15</td>
+			<td class="ud">
+				<ol>
+					<li>ROM Hole size should be in 16 bytes alignment.</li>
+					<li>Fix the problem that Boot Block checksum may be bad with non-64KB Boot Block.</li>
+					<li>Displays a warning message when insert a module which was compressed twice.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIOLDOS</td>
+			<td>1.09</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that non-64KB Boot Block BIOS image may not be generated.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.10</td>
+			<td class="ud">
+				<ol>
+					<li>ROM Hole size should be in 16 bytes alignment.</li>
+					<li>Fix the problem that Boot Block checksum may be bad with non-64KB Boot Block.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIOLWIN</td>
+			<td>1.09</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that non-64KB Boot Block BIOS image may not be generated.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.10</td>
+			<td class="ud">
+				<ol>
+					<li>ROM Hole size should be in 16 bytes alignment.</li>
+					<li>Fix the problem that Boot Block checksum may be bad with non-64KB Boot Block.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="3">OEMLOGO</td>
+			<td>3.10</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that non-64KB Boot Block BIOS image may not be generated.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.11</td>
+			<td class="ud">
+				<ol>
+					<li>ROM Hole size should be in 16 bytes alignment.</li>
+					<li>Fix the problem that Boot Block checksum may be bad with non-64KB Boot Block.</li>
+					<li>Check logo format to see if it is acceptable by BIOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.12</td>
+			<td class="ud">
+				<ol>
+					<li>Do not convert 16-color BMP to GRFX format if given ROM Image does not support GRFX.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFULNX</td>
+			<td>4.05</td>
+			<td class="ud">
+				<ol>
+					<li>Now AFULNX can be configured and then executed properly through AFUSETUP utility. Following items are configurable:</li>
+					<ul>
+						<li>Command state: enable/disable, shown/hidden, and always issued.</li>
+						<li>Error return code and error message.</li>
+					</ul>
+					<li>Better algorithm in finding system's ROM ID.</li>
+					<li>Fix potential failure on physical memory un-mapping.</li>
+					<li>Fix possible memory leaks problems.</li>
+					<li>Fix bad grammar of some error messages.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIPWD</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIPWDW</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AFUDOS</td>
+			<td>4.05</td>
+			<td class="ud">
+				<ol>
+					<li>Now AFUDOS can be configured and then executed properly through AFUSETUP utility. Following items are configurable:</li>
+					<ul>
+						<li>Command state: enable/disable, shown/hidden, and always issued.</li>
+						<li>Error return code and error message.</li>
+					</ul>
+					<li>Better algorithm in finding system's ROM ID.</li>
+					<li>Fix potential failure on physical memory un-mapping.</li>
+					<li>Fix possible memory leaks problems.</li>
+					<li>Fix bad grammar of some error messages.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.06</td>
+			<td class="ud">
+				<ol>
+					<li>Add maximum retry parameter.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AFUWIN</td>
+			<td>4.12</td>
+			<td class="ud">
+				<ol>
+					<li>Now AFUWIN can be configured and then executed properly through AFUSETUP utility. Following items are configurable:</li>
+					<ul>
+						<li>Command state: enable/disable, shown/hidden, and always issued.</li>
+						<li>Error return code and error message.</li>
+					</ul>
+					<li>Better algorithm in finding system's ROM ID.</li>
+					<li>Fix potential failure on physical memory un-mapping.</li>
+					<li>Fix possible memory leaks problems.</li>
+					<li>Fix bad grammar of some error messages.</li>
+					<li>AFUWIN return code is updated into registry</li>
+					<li>AFUWIN GUI mode: When dumping system BIOS to ROM file, ".ROM" is automatically appended onto filename.</li>
+					<li>AFUWIN GUI mode: Popup warning message changed into resource and moved to the start of execution.</li>
+					<li>UCOREW64.SYS can now be merged into AFUWIN.EXE.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>4.13</td>
+			<td class="ud">
+				<ol>
+					<li>Add maximum retry parameter.</li>
+					<li>Fix the problem that system cannot restart after flash done.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.06</td>
+			<td class="ud">
+				<ol>
+					<li>Modify reading SMBIOS data method.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.12</td>
+			<td class="ud">
+				<ol>
+					<li>Modify reading SMBIOS data method.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_8_RC2</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMDOS</td>
+			<td>1.11</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that Boot Block Image may be truncated in some condition.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.08</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that Boot Block Image may be truncated in some condition.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMWIN</td>
+			<td>1.11</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that Boot Block Image may be truncated in some condition.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLWIN</td>
+			<td>1.08</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that Boot Block Image may be truncated in some condition.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.13</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that Boot Block Image may be truncated in some condition.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCOREDLL</td>
+			<td>2.02.01</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that Boot Block Image may be truncated in some condition.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.09</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that Boot Block Image may be truncated in some condition.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIBCP</td>
+			<td>3.14</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that Boot Block Image may be truncated in some condition.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.15</td>
+			<td class="ud">
+				<ol>
+					<li>Support award setup-style.</li>
+					<li>Modify undo function in Register Edit page.</li>
+					<li>Modify undo function in BIOS Strings page.</li>
+					<li>Modify less words question in report file.</li>
+					<li>Modify question item data incorrect after drag and drop in Setup Configuration.</li>
+					<li>Modify OEM Data pop up error message as the word number greater 62.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.11</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the bug of making AMISCE to be compatible with old BIOS.</li>
+					<li>Fixed the bug of handling password when using "/i" and "/cw" functions.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.11</td>
+			<td class="ud">
+				<ol>
+					<li>Fixed the bug of handling password when using "/i" and "/cw" functions.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.11</td>
+			<td class="ud">
+				<ol>
+					<li>Fix afuwin GUI mode: If "restart" is checked, afuwin always restart even if user hit 'EXIT' directly.</li>
+					<li>Fix afuwin GUI: Can not preserve specific SMBIOS types.</li>
+					<li>Fix afuwin text mode: Silent mode doesn't end until user presses a key.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.11</td>
+			<td class="ud">
+				<ol>
+					<li>Allow the UUID field vale be modified in the type 1.</li>
+					<li>Modify hexadecimal editor function.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.05</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that truncated UUID cannot be updated via DMS file.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.11</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that truncated UUID cannot be updated via DMS file.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_8_RC1</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMDOS</td>
+			<td>1.10</td>
+			<td class="ud">
+				<ol>
+					<li>Change help screen for AMIMMWIN.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.07</td>
+			<td class="ud">
+				<ol>
+					<li>Change help screen for AMIOLWIN.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMWIN</td>
+			<td>1.10</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLWIN</td>
+			<td>1.07</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.05</td>
+			<td class="ud">
+				<ol>
+					<li>Update SMBIOS version from 2.3.2 to 2.4.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.10</td>
+			<td class="ud">
+				<ol>
+					<li>Compatible with previous BIOS.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.10</td>
+			<td class="ud">
+				<ol>
+					<li>Windows XP64 support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.12</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that extracted module size does not of proper.</li>
+					<li>Adjust the surface of Extract Tab.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.04</td>
+			<td class="ud">
+				<ol>
+					<li>Add capability to preserve SMBIOS structures in NVRAM.</li>
+					<li>Fix error parsing command line if 2nd character of ROM filename is 'm'.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.10</td>
+			<td class="ud">
+				<ol>
+					<li>Add capability to preserve SMBIOS structures in NVRAM.</li>
+					<li>Fix error parsing command line if 2nd character of ROM filename is 'm'.</li>
+					<li>Windows GUI support.</li>
+					<li>Windows XP64 support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.10</td>
+			<td class="ud">
+				<ol>
+					<li>Windows XP64 support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.10</td>
+			<td class="ud">
+				<ol>
+					<li>Windows XP64 support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCOREDLL</td>
+			<td>2.02.00</td>
+			<td class="ud">
+				<ol>
+					<li>Windows XP64 support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCORESYS</td>
+			<td>1.02.00</td>
+			<td class="ud">
+				<ol>
+					<li>Compiled by WINDDK.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>UCOREW64</td>
+			<td>1.00.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.08</td>
+			<td class="ud">
+				<ol>
+					<li>16-Color BMP large logo does not limit to 640*480.</li>
+					<li>Fix the problem that program crashed if given ROM file contained unsupported format.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_7</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMDOS</td>
+			<td>1.09</td>
+			<td class="ud">
+				<ol>
+					<li>Fit Boot Block image to proper location automatically.</li>
+					<li>ROM ID characters will always be in upper case.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.06</td>
+			<td class="ud">
+				<ol>
+					<li>Fit Boot Block image to proper location automatically.</li>
+					<li>ROM ID characters will always be in upper case.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.11</td>
+			<td class="ud">
+				<ol>
+					<li>Fit Boot Block image to proper location automatically.</li>
+					<li>ROM ID characters will always be in upper case.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.07</td>
+			<td class="ud">
+				<ol>
+					<li>Fit Boot Block image to proper location automatically.</li>
+					<li>ROM ID characters will always be in upper case.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.03</td>
+			<td class="ud">
+				<ol>
+					<li>ROM ID characters are case-insensitive.</li>
+					<li>Compressed ROM Image support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.03</td>
+			<td class="ud">
+				<ol>
+					<li>ROM ID characters are case-insensitive.</li>
+					<li>Compressed ROM Image support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIBCP</td>
+			<td>3.12</td>
+			<td class="ud">
+				<ol>
+					<li>Fix some user interface bug.</li>
+					<li>Fix the problem that some string disappeared after change SETUP screen layout.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.13</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the compatibility issue for SETUP screen layout function.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.01</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that system hangs while "/CW" command is running.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.01</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that system hangs while "/CW" command is running.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.05</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that AMD K8 system reboot while "/ALL" is running.</li>
+					<li>Fix the problem that AMD K8 system reboot while updating via configuration file.</li>
+					<li>Fix the problem that AMD K8 system reboot while updating string.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.04</td>
+			<td class="ud">
+				<ol>
+					<li>Fix some user interface bug.</li>
+					<li>Fix the problem that system reboot while updating all structure including an empty Type 11.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_7_RC3</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td rowspan="3">AMIMMDOS</td>
+			<td>1.06</td>
+			<td class="ud">
+				<ol>
+					<li>Display error message when user wants to insert a compressed file.</li>
+					<li>Fix the problem that cannot extract uncompressed module to disk.</li>
+					<li>128KB Boot Block support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.07</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that invalid CPU Patch file may cause program crash.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.08</td>
+			<td class="ud">
+				<ol>
+					<li>Add "/SM" command to modify Sign-On Message.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">MMTOOL</td>
+			<td>3.04</td>
+			<td class="ud">
+				<ol>
+					<li>Display error message when user wants to insert a compressed file.</li>
+					<li>Fix the problem that cannot extract uncompressed module to disk.</li>
+					<li>128KB Boot Block support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.10</td>
+			<td class="ud">
+				<ol>
+					<li>ROM Information, ROM Hole and CPU MicroCode Patch support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.05</td>
+			<td class="ud">
+				<ol>
+					<li>128KB Boot Block support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">OEMLOGO</td>
+			<td>3.05</td>
+			<td class="ud">
+				<ol>
+					<li>128KB Boot Block support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.06</td>
+			<td class="ud">
+				<ol>
+					<li>Add "Do not convert GRFX" option.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIBCP</td>
+			<td>3.10</td>
+			<td class="ud">
+				<ol>
+					<li>SETUP screen layout support.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.11</td>
+			<td class="ud">
+				<ol>
+					<li>Do not allow user to change default settings if the item has no default value.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.02</td>
+			<td class="ud">
+				<ol>
+					<li>Fix bugs for /C, /K, /O and /U command.</li>
+					<li>Add /M option to update Boot Block MAC address if it exists.</li>
+					<li>Check BIOS write-protection.</li>
+					<li>Display error message when AFUDOS is running under Windows.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.02</td>
+			<td class="ud">
+				<ol>
+					<li>Fix bugs for /C, /K, /O and /U command.</li>
+					<li>Add /M option to update Boot Block MAC address if it exists.</li>
+					<li>Check BIOS write-protection.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>2.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>2.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.04</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that the input value range between 00-09 is invalid for "/CT" command.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.04</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that the input value range between 00-09 is invalid for "/CT" command.</li>
+					<li>"/ALL" command may not work well.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>Fix some user interface bug.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_7_RC2</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIOLDOS</td>
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>Small Logo module cannot be deleted.</li>
+					<li>/S + /F command will destroy logo image.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.04</td>
+			<td class="ud">
+				<ol>
+					<li>Inserting a logo image into the BIOS that is no large logo module will cause the BIOS hanging at checkpoint 37h during POST.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="3">MMTOOL</td>
+			<td>3.01</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that Insert Module has no function after a module to be deleted.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.02</td>
+			<td class="ud">
+				<ol>
+					<li>Inserting a module into the BIOS will cause the BIOS hanging at check point 37h during POST.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.03</td>
+			<td class="ud">
+				<ol>
+					<li>Display warning message when user wants to insert a compressed file.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMDOS</td>
+			<td>1.05</td>
+			<td class="ud">
+				<ol>
+					<li>Support SLP string up to 62 characters.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">OEMLOGO</td>
+			<td>3.03</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that cannot change OEM/small logo twice and adjust interface size.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.04</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that SaveImage function does not work well.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that update data failure while O/S running under multi-processor mode.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that update data failure while O/S running under multi-processor mode.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that update data failure while O/S running under multi-processor mode.</li>
+					<li>Input string length limited at 63 characters.</li>
+					<li>Allows user to input hexadecimal value at Data Modification Box.</li>
+					<li>Disable mouse right-click function to avoid that program crash.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS/AFUWIN</td>
+			<td>4.01</td>
+			<td class="ud">
+				<ol>
+					<li>Add /L2 and /L3 commands to load CMOS optimal/default settings from given ROM File.</li>
+					<li>Lock keyboard and mouse during flashing BIOS.</li>
+					<li>Fix the problem that EC block cannot be updated.</li>
+					<li>Fix the problem that NCB checksum error if the ROM file built by ROMBUILD v4.04 or lower.</li>
+					<li>Fix the problem that cannot get correct ROM ID from CORE 8.00.10(or lower) BIOS ROM file.</li>
+					<li>Fix the problem that update BIOS failure while O/S running under multi-processor mode.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMICMOS</td>
+			<td>2.01</td>
+			<td class="ud">
+				<ol>
+					<li>Display error message if this program is running under non-DOS environment and parameter present.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>ROMSETUP</td>
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that system hang while enter to EventLog menu.</li>
+					<li>Fix the problem that system hang in CORE v8.00.12's BBS function.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>1.50</td>
+			<td class="ud">
+				<ol>
+					<li>Just change version to accord with AMISCEW.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>1.50</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that cannot work under windows with H/T CPU enabled.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.01</td>
+			<td class="ud">
+				<ol>
+					<li>Fix some bug.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.11_ROMUTILS_7_RC1</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that small logo cannot display correctly.</li>
+					<li>Add /XY options to define X-/Y-coordinate for GRFX format only.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="3">AMIMMDOS</td>
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>Added /CP, /CPD, /CPE and /CPI commands to handle CPU MicroCode Patch Module.</li>
+					<li>Added /INFO command to display/save BIOS ROM Information.</li>
+					<li>[/U] option is now working on </E> command.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.03</td>
+			<td class="ud">
+				<ol>
+					<li>No function with CPU MicroCode Patch data index.</li>
+					<li>Insert CPU MicroCode Patch data failure.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.04</td>
+			<td class="ud">
+				<ol>
+					<li>Remove /L option.</li>
+					<li>Add /LM command to insert a linked-module.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIDEDOS</td>
+			<td>1.01</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some type with value field cannot be updated.</li>
+					<li>Display wrong DWORD value.</li>
+					<li>Default UUID value will be 0.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>Add new commands - /SKU for SKU Number in Type 1 and /SF for Family Name in Type.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">AMIDEWIN</td>
+			<td>1.01</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that some type with value field cannot be updated.</li>
+					<li>Display wrong DWORD value.</li>
+					<li>Default UUID value will be 0.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>1.02</td>
+			<td class="ud">
+				<ol>
+					<li>Add new commands - /SKU for SKU Number in Type 1 and /SF for Family Name in Type.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMICMOS</td>
+			<td>2.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal Release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td rowspan="2">OEMLOGO</td>
+			<td>3.02</td>
+			<td class="ud">
+				<ol>
+					<li>Following picture formats are acceptable for OEM Logo:</li>
+					<ul>
+						<li>16/256-Color BMP file</li>
+						<li>256-Color PCX file</li>
+						<li>16M-Color JPG file</li>
+					</ul>
+					<li>Small OEM resolution will be limited at 640*80, 16-Color.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>3.03</td>
+			<td class="ud">
+				<ol>
+					<li>Fix the problem that cannot change OEM/small logo twice and adjust interface size.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.01</td>
+			<td class="ud">
+				<ol>
+					<li>Add new commands - /SKU for SKU Number in Type 1 and /SF for Family Name in Type.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>MMTOOL</td>
+			<td>3.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIBCP</td>
+			<td>3.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCE</td>
+			<td>1.49</td>
+			<td class="ud">
+				<ol>
+					<li>Working version release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMISCEW</td>
+			<td>1.49</td>
+			<td class="ud">
+				<ol>
+					<li>Working version release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUDOS</td>
+			<td>4.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AFUWIN</td>
+			<td>4.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.08_ROMUTILS_7_BETA2</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>ROMSETUP</td>
+			<td>1.01</td>
+			<td class="ud">
+				<ol>
+					<li>Corrects algorithm for computing MenuItem - ShadeWhenList field size.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMDOS</td>
+			<td>1.01</td>
+			<td class="ud">
+				<ol>
+					<li>Add /RHF command to fill ROM Hole with given file.</li>
+					<li>Update BIOS release Date/Time after rebuild ROM.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.01</td>
+			<td class="ud">
+				<ol>
+					<li>Update BIOS release Date/Time after rebuild ROM.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEDOS</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIDEWIN</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>OEMLOGO</td>
+			<td>3.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>DMIEDIT</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<table class="subs" cellspacing="0">
+		<caption>8.00.08_ROMUTILS_7_BETA1</caption>
+		<tr>
+			<th class="sheader">Utility Name</th>
+			<th class="sheader">Release Version</th>
+			<th class="sheader">Update Description</th>
+		</tr>
+		<tr class="rh">
+			<td>AMIMMDOS</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>AMIOLDOS</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+		<tr class="rh">
+			<td>ROMSETUP</td>
+			<td>1.00</td>
+			<td class="ud">
+				<ol>
+					<li>Formal release.</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

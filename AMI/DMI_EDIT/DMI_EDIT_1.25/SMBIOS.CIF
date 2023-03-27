@@ -1,0 +1,18 @@
+<component>
+	name = "AMIBIOS SMBIOS/DMI Utilities"
+	category = eModule
+	RefName = "AMIBIOS_ROM_UTILITY_SMBIOS"
+[files]
+"AMIDEDOS.EXE"	
+"AMIDEWIN.EXE"
+"AMIDEWINx64.exe"	
+"DMIEDIT.EXE"	
+"UCOREDLL.DLL"	
+"UCORESYS.SYS"	
+"UCOREW64.SYS"	
+"UCOREVXD.VXD"	
+"ROM Utilities Release Notes.htm"	
+"AMIBIOS ROM Utilities User Guide.pdf"	
+"DMI16.EXE"
+"amidelnx.tgz"
+<endComponent>
